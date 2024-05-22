@@ -238,7 +238,7 @@ article.apresentacao{
     height: auto;
 }
 img.emoji-mao-acenando{
-    width: 3vw;
+    width: 3rem;
     height: auto;
 }
 
@@ -250,8 +250,8 @@ div.minha-foto{
 
     background-color: #000;
     box-shadow: 3px 5px 13px 0px rgb(0 0 0 / 58%);
-    width: 300px;
-    height: 300px;
+    width: 18rem;
+    height: 18rem;
     border-radius: 50%;
     border: 2px solid #5E17EB;
 }
@@ -338,4 +338,50 @@ footer{
 
 footer .icones-link>a:hover{
     color: white;
+}
+
+/*Mobile Config*/
+
+@media (max-width:1070px) {
+    
+    section{
+        height: auto;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        gap: 2rem;
+    }
+
+    article{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .inicio article{
+        flex-direction: column-reverse;
+    }
+
+    article.apresentacao{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        padding-bottom: 7rem;
+        width: 70vw;
+    }
+
+    .texto-apresentacao{
+        align-items: center;
+        width: 70vw;
+        text-align: center;
+        gap: 1.2rem;
+    }
+
+    .minha-stack{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+
+    footer{
+        flex-wrap: wrap;
+    }
 }
