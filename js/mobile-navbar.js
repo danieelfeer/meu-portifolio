@@ -10,7 +10,11 @@ class MobileNavbar{
 
     animateLinks(){
         this.navLinks.forEach((link, index) => {
-            link.style.animation ? (link.style.animation = "") : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
+            if (this.navList.classList.contains(this.activeClass)) {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            } else {
+                link.style.animation = "";
+            }
         });
     }
 
@@ -22,6 +26,14 @@ class MobileNavbar{
 
     addClickEvent(){
         this.mobileMenu.addEventListener("click", this.handleClick);
+
+        this.navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                // Fecha o menu hamburguer após o clique
+                this.navList.classList.remove(this.activeClass);
+                this.mobileMenu.classList.remove(this.activeClass);
+            });
+        });
     }
 
     init(){
@@ -40,21 +52,3 @@ const mobileNavbar = new MobileNavbar(
 
 mobileNavbar.init();
 
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav ul li a'); 
-
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 300;
-        let height =  sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top >= offset && top < offset + height){
-            navLinks.forEach(links =>{
-                links.classList.remove('active');
-                document.querySelector('header nav ul li a[href*=' + id + ']').classList.add('active');
-            });
-        }
-    });
-};
