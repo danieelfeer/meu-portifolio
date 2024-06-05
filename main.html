@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portifolio</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="images/download.png" type="image/x-icon">
+
     <!--Icones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script defer src="js/navegacao.js"></script>
 
     <script defer src="js/mobile-navbar.js"></script>
+
+    <script defer src="js/darkmode.js"></script>
 </head>
 <body>
     <header class="barra-menu">
@@ -26,6 +31,9 @@
                 <li><a href="#sobre-mim">Sobre Mim</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
+
+                <input id="dark-btn" type="checkbox" hidden>
+                <label for="dark-btn"></label>
             </ul>
         </nav>
     </header>
@@ -79,16 +87,16 @@
         
         <section id="projetos" class="projetos">
             <article id="projeto-1" class="apresentacao">
+                
                <div class="texto-apresentacao">
 
                     <h3>Projetos</h3>
                     <h2>Encriptador de Texto</h2>
-                    <p>Simples algoritimo utilizando matriz que converte as letras de uma 
-                    palavra e depois desencripta</p>
+                    <p>Este é um pequeno programa de encriptação de texto desenvolvido como parte do meu aprendizado de JavaScript. O programa permite encriptar texto de forma simples usando um algoritmo básico de substituição de caracteres.</p>
                     
                     <div class="icones-link">
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                        <a href="https://github.com/danieelfeer/Encriptador-Texto" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://danieelfeer.github.io/Encriptador-Texto/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
 
                         <div>
                             <i class="fa-brands fa-html5 fa-1x" style="color: #ff3300;"></i>
@@ -103,30 +111,24 @@
 
             <article id="projeto-2" class="apresentacao">
                 <div class="texto-apresentacao">
-                     <h2>Encriptador de Texto</h2>
-                     <p>Simples algoritimo utilizando matriz que converte as letras de uma 
-                     palavra e depois desencripta</p>
-                     
-                     <div class="icones-link">
-                         <a href="#"><i class="fa-brands fa-github"></i></a>
-                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
- 
-                         <div>
-                             <i class="fa-brands fa-html5 fa-1x" style="color: #ff3300;"></i>
-                             <i class="fa-brands fa-css3-alt fa-1x" style="color: #005eff;"></i>
-                             <i class="fa-brands fa-square-js fa-1x" style="color: #ffc800;"></i>
-                         </div>
-                     </div>
-                     
+                    <h2>Lista de tarefas</h2>
+                    <p>Este é um simples aplicativo de Lista de Tarefas escrito em C. O programa permite aos usuários criar tarefas, marcá-las como concluídas, exibir tarefas (concluídas e não concluídas), remover tarefas e salvar tarefas em um arquivo.</p>
+                    
+                    <div class="icones-link">
+                        <a href="https://github.com/danieelfeer/to-do-list"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://github.com/danieelfeer/to-do-list/blob/main/to-do.c"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                        <div>
+                        <i class="fa-solid fa-c fa-1x" style="color: #0041b3;"></i>
+                        </div>
+                    </div>
                  </div>
-                 <div class="div-imagem"></div>
+                <video src="images/306670909-93fb270a-c59f-424c-86ef-6d629d100877.mp4" type="video/mp4" controls></video>
              </article>
 
              <article id="projeto-3" class="apresentacao">
                 <div class="texto-apresentacao">
-                     <h2>Encriptador de Texto</h2>
-                     <p>Simples algoritimo utilizando matriz que converte as letras de uma 
-                     palavra e depois desencripta</p>
+                     <h2>Portifólio</h2>
+                     <p>Portifólio com apresentação dos meus projetos. Utilizando HTML, CSS e JavaScript.</p>
                      
                      <div class="icones-link">
                          <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -140,7 +142,7 @@
                      </div>
                      
                  </div>
-                 <div class="div-imagem"></div>
+                 <div class="div-imagem projeto"></div>
              </article>
         </section>
         

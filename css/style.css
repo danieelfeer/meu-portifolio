@@ -40,6 +40,50 @@ ul, ol{
     --cor-icone-link-hover: #5E17EB;
 }
 
+.dark-mode:root{
+    --cor-backgroung-1: #090014;
+    --cor-background-2: #120029;
+
+    --cor-texto: #F1F1F1;
+    --cor-titulo: #5E17EB;
+    --cor-titulo-2: #ffff;
+
+    --cor-icone-link-hover: #5E17EB;
+}
+
+
+label {
+	min-height: 30px;
+	min-width: 70px;
+	background: #202430;
+	border-radius: 80px;
+	overflow: hidden;
+	cursor: pointer;
+	transition: 0.3s;
+	display: flex;
+    align-items: center;
+}
+
+#dark-btn:checked ~ label {
+	background: var(--cor-titulo);
+}
+
+label:before {
+	content: "";
+	margin: 0 7px;
+	height: 20px;
+	width: 20px;
+	background: whitesmoke;
+	border-radius: 80px;
+	transition: 0.5s;
+}
+
+#dark-btn:checked ~ label:before {
+	transform: translateX(180%);
+	background: #fff;
+}
+
+
 body{
     font-family: var(--fonte-titulo);
     width: 100vw;
@@ -82,6 +126,10 @@ section> article:nth-child(even) {
 h1{
     font-family: var(--fonte-titulo);
     font-size: 2.5rem;
+    color: var(--cor-titulo-2);
+}
+
+h2{
     color: var(--cor-titulo-2);
 }
 
@@ -160,7 +208,7 @@ header.barra-menu {
         right: 0;
         width: 100vw;
         height: 90vh;
-        background-color: var(--cor-backgroung-1);
+        background-color: var(--cor-background-2);
 
         flex-direction: column;
         align-items: center;
@@ -172,6 +220,10 @@ header.barra-menu {
     .nav-list li{
         margin-left: 0;
         opacity: 0;
+    }
+
+    .nav-list li a{
+        color: var(--cor-titulo-2);
     }
 
     .mobile-menu{
@@ -255,10 +307,11 @@ div.minha-foto{
     border-radius: 50%;
     border: 2px solid #5E17EB;
 }
-.icones-link{
+.icones-link, i{
+    color: var(--cor-titulo-2);
     font-size: 2rem;
 }
-.icones-link a:hover{
+.icones-link a>i:hover{
     color: var(--cor-icone-link-hover);
 }
 
@@ -289,6 +342,12 @@ div.minha-foto{
     border-radius: 10%;
 }
 
+video{
+    width: 35rem;
+    height: auto;
+    border-radius: 10%;
+}
+
 #imagem-sobre-mim{
     background: url("../images/img-programando.jpg") no-repeat center 
 }
@@ -296,6 +355,31 @@ div.minha-foto{
 .projetos{
     height: auto;
 }
+
+.projetos .texto-apresentacao{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.projetos .div-imagem{
+    width: 45rem;
+    height: 20rem;
+    border-radius: 7%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.projetos #projeto-1 .div-imagem{
+    background-image: url("../images/encript_.gif");
+}
+
+.projetos #projeto-3 .div-imagem{
+    background-image: url("../images/portifolio-img.png");
+}
+
+
 
 .contato{
     height: 70vh;
@@ -343,7 +427,7 @@ footer .icones-link>a:hover{
 
 /*Mobile Config*/
 
-@media (max-width:1070px) {
+@media (max-width:1600px) {
     
     section{
         height: auto;
