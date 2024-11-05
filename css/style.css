@@ -141,7 +141,7 @@ h3{
 }
 
 p{ 
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 2vh 0vh 2vh;
     color: var(--cor-texto);
 }
@@ -315,6 +315,10 @@ div.minha-foto{
     color: var(--cor-icone-link-hover);
 }
 
+.icones-link > div{
+    padding: 1rem 0rem;
+}
+
 .minha-stack{
     display: flex;
     flex-direction: row;
@@ -372,11 +376,11 @@ video{
 }
 
 .projetos #projeto-2 .div-imagem{
-    background-image: url("../images/encript_.gif");
+    background-image: url("../images/clicker-the-last-of-us.png");
 }
 
 .projetos #projeto-3 .div-imagem{
-    background-image: url("../images/portifolio-img.png");
+    background-image: url("https://repository-images.githubusercontent.com/589202470/23a403ef-85c3-493f-881a-ffa186b043cb");
 }
 
 
@@ -428,6 +432,10 @@ footer .icones-link>a:hover{
 /*Mobile Config*/
 
 @media (max-width:1600px) {
+
+    html, body{
+        overflow-x: hidden;
+    }
     
     section{
         height: auto;
